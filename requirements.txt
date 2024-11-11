@@ -1,4 +1,4 @@
-pip>=24.3.1
+pip==24.3.1
 streamlit==1.36.0
 yt_dlp==2024.11.04
 whisper
