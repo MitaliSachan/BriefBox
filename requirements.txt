@@ -1,4 +1,4 @@
-https://download.lfd.uci.edu/pythonlibs/x64/tokenizers-0.13.3-cp38-cp38-win_amd64.whl
+
 streamlit==1.36.0
 yt_dlp==2024.11.04
 whisper
