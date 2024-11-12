@@ -1,11 +1,9 @@
 
 streamlit==1.36.0
 yt_dlp==2024.11.04
-whisper
+git+https://github.com/openai/whisper.git
 ffmpeg-python==0.2.0
-
 requests==2.31.0
-
 setuptools-rust>=1.5
 
 
