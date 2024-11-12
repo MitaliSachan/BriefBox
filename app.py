@@ -58,24 +58,28 @@ def generate_summary_from_video(video_path):
 
 
 def main():
-  st.title("Welcome to BriefBox")
-  html_temp = """
-	<div style ="background-color:#000435;padding:13px">
-	<h2 style ="color:white;text-align:center;">Welcome to BriefBox</h2>
+	# giving the webpage a title
+	st.title("Iris Flower Prediction")
+
+	# here we define some of the front end elements of the web page like
+	# the font and background color, the padding and the text to be displayed
+	html_temp = """
+	<div style ="background-color:#E68369;padding:13px ;border-radius:10% ">
+	<h2 style ="color:white;text-align:center;">Streamlit Iris Flower Classifier</h2>
 	</div><br>
 	"""
 	st.markdown(html_temp, unsafe_allow_html = True)
-youtube_link = st.text_input("Enter Your Video Link:")
-if youtube_link:
-	video_id = youtube_link.split("=")[1]
-	print(video_id)
-	st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_container_width=True)
+	youtube_link = st.text_input("Enter Your Video Link:")
+	if youtube_link:
+		video_id = youtube_link.split("=")[1]
+		print(video_id)
+		st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_container_width=True)
 	
-if st.button("Get Detailed Notes"):
-	transcript_text=generate_summary_from_video(youtube_link)
-	if transcript_text:
-		st.markdown("## Detailed Notes:")
-		st.write(transcript_text)
+	if st.button("Get Detailed Notes"):
+		transcript_text=generate_summary_from_video(youtube_link)
+		if transcript_text:
+			st.markdown("## Detailed Notes:")
+			st.write(transcript_text)
   # this line allows us to display the front end aspects we have
   # defined in the above code
 
