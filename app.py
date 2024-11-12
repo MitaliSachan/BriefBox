@@ -64,23 +64,23 @@ def main():
 	<h2 style ="color:white;text-align:center;">Welcome to BriefBox</h2>
 	</div><br>
 	"""
+	st.markdown(html_temp, unsafe_allow_html = True)
+youtube_link = st.text_input("Enter Your Video Link:")
+if youtube_link:
+	video_id = youtube_link.split("=")[1]
+	print(video_id)
+	st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_container_width=True)
+	
+if st.button("Get Detailed Notes"):
+	transcript_text=generate_summary_from_video(youtube_link)
+	if transcript_text:
+		st.markdown("## Detailed Notes:")
+		st.write(transcript_text)
   # this line allows us to display the front end aspects we have
-	# defined in the above code
- st.markdown(html_temp, unsafe_allow_html = True)
+  # defined in the above code
 
- youtube_link = st.text_input("Enter Your Video Link:")
 
- if youtube_link:
-    video_id = youtube_link.split("=")[1]
-    print(video_id)
-    st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_container_width=True)
-
- if st.button("Get Detailed Notes"):
-    transcript_text=generate_summary_from_video(youtube_link)
-
-    if transcript_text:
-        st.markdown("## Detailed Notes:")
-        st.write(transcript_text)
+ 
       
 if __name__=='__main__':
 	main()
