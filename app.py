@@ -1,4 +1,3 @@
-pip install git+https://github.com/openai/whisper.git 
 import yt_dlp
 import whisper
 import streamlit as st
