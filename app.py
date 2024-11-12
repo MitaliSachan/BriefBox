@@ -2,7 +2,7 @@ import yt_dlp
 import whisper
 import streamlit as st
 import os
-from transformers import pipeline
+
 from datetime import datetime
 
 model = whisper.load_model("small")
