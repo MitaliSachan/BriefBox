@@ -5,7 +5,7 @@ whisper
 ffmpeg-python==0.2.0
 
 requests==2.31.0
-tokenizers==0.13.3
+
 setuptools-rust>=1.5
 
 
